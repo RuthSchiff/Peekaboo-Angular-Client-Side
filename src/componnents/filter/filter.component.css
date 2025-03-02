@@ -1,0 +1,154 @@
+/* עיצוב כללי */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  color:  #e27da0;
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.filters {
+  border: 2px solid #FF69B4;
+  /* background-color: linear-gradient(135deg, #FF69B4, #ffffff, #3470cf); */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin: 5px 10px;
+  display: block;
+  text-align: right;
+  width: auto;
+}
+
+select, input[type="range"] {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 5px 10px;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+/* שינוי צבע פס של range */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #4285F4; /* צבע כחול */
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* צל קל */
+  color: palevioletred;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #4285F4;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background-color: #e27da0;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  margin: 10px auto;
+}
+
+button:hover {
+  background-color: #357AE8;
+}
+
+.price-range {
+  display: flex;
+  align-items: center;
+  margin: 5px 10px;
+
+}
+
+.price-range span {
+  
+  margin: 0 5px;
+}
+
+
+/* עיצוב המוצרים */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* הקטנתי את הרוחב המינימלי */
+  gap: 20px;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-image {
+  width: 100%;
+  height: 160px; /* הקטנתי את גובה התמונה */
+  object-fit: cover;
+}
+
+.out-of-stock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.added-to-cart {
+  color: green;
+  margin-top: 5px;
+}
+
+.red {
+  color: #8B0000;
+}
+
+.black {
+  color: black;
+}

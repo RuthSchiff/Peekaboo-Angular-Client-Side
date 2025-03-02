@@ -1,0 +1,75 @@
+<!-- 
+   <div class="size-guide-container">
+    <h2>מדריך בגדים לתינוקות</h2>
+  
+    <label for="imageUpload">העלאת תמונה של התינוק</label>
+    <input type="file" id="imageUpload" (change)="onImageUpload($event)" />
+  
+    <div *ngIf="safeImageUrl">  <h3>תמונה שהועלתה:</h3>
+      <img [src]="safeImageUrl" alt="תמונה של התינוק" /> </div>
+  
+    <h3>הגיל המוערך: {{ age }} חודשים</h3>
+    <h3>הגודל המומלץ: {{ size }}</h3>
+  
+    <label for="age">גיל (במספר חודשים):</label>
+    <input type="number" id="age" [(ngModel)]="age" (ngModelChange)="calculateSize()" />
+  
+    <label for="weight">משקל (ק"ג):</label>
+    <input type="number" id="weight" [(ngModel)]="weight" (ngModelChange)="calculateSize()" />
+  
+    <label for="height">גובה (ס"מ):</label>
+    <input type="number" id="height" [(ngModel)]="height" (ngModelChange)="calculateSize()" />
+  
+    <label for="headCircumference">היקף ראש (ס"מ):</label>
+    <input type="number" id="headCircumference" [(ngModel)]="headCircumference" (ngModelChange)="calculateSize()" />
+  
+    <label for="chestCircumference">היקף חזה (ס"מ):</label>
+    <input type="number" id="chestCircumference" [(ngModel)]="chestCircumference" (ngModelChange)="calculateSize()" />
+  
+    <label for="waistCircumference">היקף מותן (ס"מ):</label>
+    <input type="number" id="waistCircumference" [(ngModel)]="waistCircumference" (ngModelChange)="calculateSize()" />
+    <button (click)="recognizeImage()">זיהוי תמונה</button>
+  </div> -->
+
+  <!-- <div class="size-guide-container">
+    <h2>מדריך בגדים לתינוקות</h2>
+  
+    <label for="imageUpload">העלאת תמונה של התינוק</label>
+    <input type="file" id="imageUpload" (change)="onImageUpload($event)" />
+  
+    <div *ngIf="safeImageUrl">
+      <h3>תמונה שהועלתה:</h3>
+      <img [src]="safeImageUrl" alt="תמונה של התינוק" />
+    </div>
+  
+    <div *ngIf="!recognized && imageUrl">
+        <h3>אנא המתן לזיהוי התמונה...</h3>
+    </div>
+  
+    <div *ngIf="size">
+      <h3>הגודל המומלץ: {{ size }}</h3>
+    </div>
+  
+  
+  </div> -->
+
+  <div class="size-guide-container">
+    <h2>מדריך בגדים לתינוקות</h2>
+  
+    <label for="imageUpload">העלאת תמונה של התינוק</label>
+    <input type="file" id="imageUpload" (change)="onImageUpload($event)" />
+  
+    <div *ngIf="safeImageUrl">
+      <h3>תמונה שהועלתה:</h3>
+      <img [src]="safeImageUrl" alt="תמונה של התינוק" />
+    </div>
+  
+    <div *ngIf="!recognized && imageUrl">
+      <h3>אנא המתן לזיהוי התמונה...</h3>
+    </div>
+  
+    <div *ngIf="size">
+      <h3>הגודל המומלץ: {{ size }}</h3>
+    </div>
+  </div>
+  

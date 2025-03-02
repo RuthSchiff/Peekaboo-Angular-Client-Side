@@ -1,0 +1,58 @@
+/* navbar.css */
+.navbar {
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* מרכוז אנכי */
+    justify-content: center; /* מרכוז אופקי */
+}
+
+.navbar-brand {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-height: 40px; /* גובה מקסימלי קטן יותר ללוגו */
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    margin: 0 20px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+    font-family: 'Arial', sans-serif;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e27da0;
+    background-color: #f0f0f0;
+}
+
+/* הסתר אלמנטים לא רצויים */
+.navbar-toggler {
+    display: none;
+}
+
+.collapse {
+    display: block !important;
+}
