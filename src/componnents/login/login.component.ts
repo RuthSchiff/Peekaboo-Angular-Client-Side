@@ -26,19 +26,9 @@ export class LoginComponent {
     loginC() {
       this.rc.login(this.object).subscribe(
         c => {
-          console.log(c);
-          // this.rc.Currentcustomer.customerName = c.customerName;
-          // this.rc.Currentcustomer.customerId = c.customerId; 
-          // console.log(this.rc.Currentcustomer.customerId +" current customer id");
-          // this.customer.customerName = c.customerName; 
           this.cart.currentCustomer = c;
           console.log(this.cart.currentCustomer," current customer");
-          //(this.rc.Currentcustomer+" current customer");
           Swal.fire('Success', 'Customer login successfully!', 'success');
-        
-          
-          
-          // this.allCustomers.push(c);
         },
         err => {
           console.log("error: " + err.message);
